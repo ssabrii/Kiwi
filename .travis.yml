@@ -33,8 +33,10 @@ stages:
 
 jobs:
   allow_failures:
-    - env: CMD=pylint
-    - env: CMD=bandit_site_packages
+    - env: 
+      - CMD=pylint
+    - env: 
+      - CMD=bandit_site_packages
 
   include:
     - stage: static_analysis
