@@ -108,8 +108,10 @@ jobs:
         - CMD=test-docker-image
 
   allow_failures:
-    - env: CMD=pylint
-    - env: CMD=bandit_site_packages
+    - env: 
+      - CMD=pylint
+    - env: 
+      - CMD=bandit_site_packages
 
 
 before_install:
